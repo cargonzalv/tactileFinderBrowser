@@ -16,7 +16,7 @@
  */
 import * as tf from '@tensorflow/tfjs';
 
-const CONTROLS = ['up', 'down', 'left', 'right'];
+const CONTROLS = ['left', 'right'];
 const CONTROL_CODES = [38, 40, 37, 39];
 
 export function init() {
@@ -66,8 +66,6 @@ export function setExampleHandler(handler) {
 let mouseDown = false;
 const totals = [0, 0, 0, 0];
 
-const upButton = document.getElementById('up');
-const downButton = document.getElementById('down');
 const leftButton = document.getElementById('left');
 const rightButton = document.getElementById('right');
 
@@ -87,16 +85,10 @@ async function handler(label) {
   document.body.removeAttribute('data-active');
 }
 
-upButton.addEventListener('mousedown', () => handler(0));
-upButton.addEventListener('mouseup', () => mouseDown = false);
-
-downButton.addEventListener('mousedown', () => handler(1));
-downButton.addEventListener('mouseup', () => mouseDown = false);
-
-leftButton.addEventListener('mousedown', () => handler(2));
+leftButton.addEventListener('mousedown', () => handler(0));
 leftButton.addEventListener('mouseup', () => mouseDown = false);
 
-rightButton.addEventListener('mousedown', () => handler(3));
+rightButton.addEventListener('mousedown', () => handler(1));
 rightButton.addEventListener('mouseup', () => mouseDown = false);
 
 export function drawThumb(img, label) {

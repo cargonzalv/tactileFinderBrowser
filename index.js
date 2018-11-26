@@ -15,7 +15,7 @@
  * =============================================================================
  */
 
-require('@tensorflow/tfjs');
+const tf = require('@tensorflow/tfjs');
 
 import {ControllerDataset} from './controller_dataset';
 const ui = require('./ui');
@@ -42,6 +42,7 @@ async function loadMobilenet() {
 
   // Return a model that outputs an internal activation.
   const layer = mobilenet.getLayer('conv_pw_13_relu');
+  console.log(mobilenet.inputs)
   return tf.model({inputs: mobilenet.inputs, outputs: layer.output});
 }
 
