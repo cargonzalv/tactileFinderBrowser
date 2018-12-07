@@ -1,10 +1,5 @@
-# TensorFlow.js Example: Transfer Learning to play Pacman via the Webcam
+# TactileFinder on browser
 
-This example shows you how to predict poses from a webcam using transfer
-learning.
+This is an attempt on running the Tactile Finder project on the browser, based on the Webcam transfer learning example found [here](https://storage.googleapis.com/tfjs-examples/webcam-transfer-learning/dist/index.html) 
 
-In this example, we'll use a pretrained [MobileNet](https://github.com/tensorflow/tfjs-examples/tree/master/mobilenet) model and train another model
-using an internal mobilenet activation to predict 4 different classes from the
-webcam defined by the user.
-
-[See this example live!](https://storage.googleapis.com/tfjs-examples/webcam-transfer-learning/dist/index.html)
+This was later discarded due to the inability of retraining the model and the UI lag that this option represented
